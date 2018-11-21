@@ -82,7 +82,7 @@ hspeed=-maxspeed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.level=Level1
+            <string>global.level=room_level1
 </string>
           </argument>
         </arguments>

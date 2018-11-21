@@ -46,7 +46,7 @@ beam = part_type_create();
 part_type_blend(beam,1);
 part_type_color1(beam,make_color_rgb(255,128,64));
 part_type_sprite(beam,sprBeam,0,0,0);
-sprite_set_alpha_from_sprite(sprBeam,sprBeam);
+//sprite_set_alpha_from_sprite(sprBeam,sprBeam);
 part_type_orientation(beam,0,360,0,0,0);
 part_type_size(beam,0,0,0.5,1);
 
@@ -69,7 +69,8 @@ part_emitter_burst(sys,emitter,flash,5);
 alarm[0]=10;
 part_emitter_burst(sys,emitter,beam,5);
 
-alarm[1]=room_speed*5</string>
+alarm[1]=room_speed*5
+</string>
           </argument>
         </arguments>
       </action>
