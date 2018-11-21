@@ -873,7 +873,7 @@ speed=max_speed</string>
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>room=Menu</string>
+            <string>room=room_menu</string>
           </argument>
         </arguments>
       </action>

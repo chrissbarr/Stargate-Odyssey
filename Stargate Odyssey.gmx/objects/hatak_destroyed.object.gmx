@@ -45,7 +45,7 @@ part_type_color1(pt_r,make_color_rgb(255,128,64));
 part_type_blend(pt_r,1);
 part_type_life(pt_r,60,60);
 part_type_size(pt_r,0,0,0.04,0);
-sprite_set_alpha_from_sprite(sprRing,sprRing)
+//sprite_set_alpha_from_sprite(sprRing,sprRing)
 part_type_sprite(pt_r,sprRing,0,1,0);
 
 //Flash Particle

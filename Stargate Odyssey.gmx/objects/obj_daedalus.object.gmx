@@ -692,7 +692,7 @@ energy=100
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room=Training
+            <string>if room=room_training
 {
 if distance_to_object(instance_nearest(x,y,obj_asteroid_target))&lt;300
 with obj_hudtextdisplay

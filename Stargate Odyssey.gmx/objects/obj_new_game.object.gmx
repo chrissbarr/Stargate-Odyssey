@@ -127,7 +127,7 @@ alarm[0]=room_speed*10</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.level=Training
+            <string>global.level=room_training
 </string>
           </argument>
         </arguments>

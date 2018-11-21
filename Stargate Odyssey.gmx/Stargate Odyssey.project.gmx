@@ -125,6 +125,7 @@
     <script>scripts\draw_radar.gml</script>
     <script>scripts\safties_override_scr.gml</script>
     <script>scripts\osm.gml</script>
+    <script>scripts\wd_message_simple.gml</script>
   </scripts>
   <fonts name="fonts">
     <fonts name="GCE3_1">
@@ -190,118 +191,6 @@
       <object>objects\selecttraining_obj</object>
       <object>objects\selectlevel1_obj</object>
     </objects>
-    <objects name="GCE3_1">
-      <objects name="GCE_maingui">
-        <object>objects\objParent_selector</object>
-        <object>objects\objParent_enginemasters</object>
-        <object>objects\objBrowser</object>
-        <object>objects\objGuide</object>
-        <object>objects\objFrontend_background</object>
-        <object>objects\objFrontend_control</object>
-        <object>objects\objAlert</object>
-        <object>objects\objGrass</object>
-        <object>objects\objCursor</object>
-        <object>objects\objButton_start</object>
-        <object>objects\objButton_landscape</object>
-        <object>objects\objButton_documentation</object>
-        <object>objects\objButton_update</object>
-        <object>objects\objButton_quit</object>
-      </objects>
-      <objects name="--------------------">
-        <object>objects\objBasic_layout</object>
-      </objects>
-      <objects name="GCE_clouds">
-        <object>objects\objClouds</object>
-      </objects>
-      <objects name="GCE_explosion">
-        <object>objects\objExplosion_control</object>
-        <object>objects\objExplosion_1</object>
-        <object>objects\objExplosion_2</object>
-        <object>objects\objExplosion_3</object>
-        <object>objects\objExplosion_4</object>
-        <object>objects\objExplosion_5</object>
-        <object>objects\objExplosion_6</object>
-        <object>objects\objExplosion_7</object>
-        <object>objects\objExplosion_8</object>
-      </objects>
-      <objects name="GCE_fire">
-        <object>objects\objFire_control</object>
-        <object>objects\objFire_1</object>
-        <object>objects\objFire_2</object>
-        <object>objects\objFire_3</object>
-      </objects>
-      <objects name="GCE_classicgore">
-        <object>objects\objClassicGore_controller</object>
-        <object>objects\objDummy1</object>
-        <object>objects\objDummy1b</object>
-        <object>objects\objDummy2</object>
-        <object>objects\objDummy2b</object>
-        <object>objects\objClassicGore_bullet</object>
-        <object>objects\objClassicGore1_stain</object>
-        <object>objects\objClassicGore1</object>
-        <object>objects\objClassicGore1b</object>
-      </objects>
-      <objects name="GCE_particlecollisions">
-        <object>objects\objParticle_collisions</object>
-        <object>objects\objPC_wall_destroyer</object>
-        <object>objects\objPC_wall_deflector</object>
-        <object>objects\objPC_wall_changer</object>
-      </objects>
-      <objects name="GCE_rain">
-        <object>objects\objRain1</object>
-        <object>objects\objRain2_control</object>
-        <object>objects\objRain2_drop</object>
-        <object>objects\objRain3</object>
-        <object>objects\objThunder_fork_basic</object>
-        <object>objects\objThunder_fork_complex</object>
-        <object>objects\objThunder_sheet</object>
-      </objects>
-      <objects name="GCE_snow">
-        <object>objects\objSnow</object>
-      </objects>
-      <objects name="GCE_overheadsnow">
-        <object>objects\objOverheadsnow</object>
-      </objects>
-      <objects name="GCE_earthquake">
-        <object>objects\objEarthquake_control</object>
-      </objects>
-      <objects name="GCE_fadetransition">
-        <object>objects\objFade_in</object>
-        <object>objects\objFade_out</object>
-      </objects>
-      <objects name="GCE_lensflare">
-        <object>objects\objLens_1</object>
-        <object>objects\objLens_2</object>
-      </objects>
-      <objects name="GCE_motionblur">
-        <object>objects\objTree</object>
-        <object>objects\objMotion_blur</object>
-      </objects>
-      <objects name="GCE_stars">
-        <object>objects\objStar</object>
-      </objects>
-      <objects name="GCE_ripples">
-        <object>objects\objRipple_control</object>
-        <object>objects\objRipple_1</object>
-        <object>objects\objRipple_2</object>
-      </objects>
-      <objects name="GCE_laser">
-        <object>objects\objLaser_ball</object>
-        <object>objects\objLaser_messenger</object>
-        <object>objects\objLaser_wall</object>
-      </objects>
-      <objects name="GCE_stars2">
-        <object>objects\objStar2</object>
-      </objects>
-      <objects name="GCE_overheadrain">
-        <object>objects\objOverheadrain</object>
-        <object>objects\objDrop</object>
-        <object>objects\objDrop_splat</object>
-      </objects>
-      <objects name="GCE_cloudsstatic">
-        <object>objects\objStaticCloud</object>
-      </objects>
-    </objects>
     <object>objects\obj_asteroid_target</object>
     <object>objects\hatak_debris_peice_obj</object>
     <object>objects\hatak_destroyed</object>
@@ -321,28 +210,6 @@
     <room>rooms\room_level2</room>
     <room>rooms\room_level3</room>
     <room>rooms\room_level4</room>
-    <rooms name="GCE3_1">
-      <room>rooms\roomMainMenu</room>
-      <room>rooms\roomExplosion</room>
-      <room>rooms\roomFire</room>
-      <room>rooms\roomStar</room>
-      <room>rooms\roomStar2</room>
-      <room>rooms\roomParticleCollisions</room>
-      <room>rooms\roomLaser</room>
-      <room>rooms\roomRipples</room>
-      <room>rooms\roomLensFlare</room>
-      <room>rooms\roomEarthquake</room>
-      <room>rooms\roomClassicGore</room>
-      <room>rooms\roomOverheadSnow</room>
-      <room>rooms\roomOverheadRain</room>
-      <room>rooms\roomClouds</room>
-      <room>rooms\roomStaticClouds</room>
-      <room>rooms\roomRain_1</room>
-      <room>rooms\roomRain_2</room>
-      <room>rooms\roomRain_3</room>
-      <room>rooms\roomMotionBlur</room>
-      <room>rooms\roomSnow</room>
-    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
