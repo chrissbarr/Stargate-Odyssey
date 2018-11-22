@@ -58,56 +58,6 @@
     <sprite>sprites\asteroid_spr</sprite>
     <sprite>sprites\hatak_bolt_glow_spr</sprite>
     <sprite>sprites\hatak_debris_spr</sprite>
-    <sprites name="GCE3_1">
-      <sprites name="GCE_maingui">
-        <sprite>sprites\sprAlert</sprite>
-        <sprite>sprites\sprArrow</sprite>
-        <sprite>sprites\sprArrow2</sprite>
-        <sprite>sprites\sprGrass</sprite>
-        <sprite>sprites\sprGrass_mask</sprite>
-        <sprite>sprites\sprGrass_alpha</sprite>
-        <sprite>sprites\sprController</sprite>
-        <sprite>sprites\sprParent</sprite>
-        <sprite>sprites\sprCursor</sprite>
-        <sprite>sprites\sprBanner</sprite>
-        <sprite>sprites\sprButton_landscape</sprite>
-        <sprite>sprites\sprButton_body</sprite>
-        <sprite>sprites\sprButton_purpose</sprite>
-        <sprite>sprites\sprBanner_alpha</sprite>
-      </sprites>
-      <sprites name="GCE_rain">
-        <sprite>sprites\sprWhite_pixel</sprite>
-      </sprites>
-      <sprites name="GCE_particlecollisions">
-        <sprite>sprites\sprWall</sprite>
-      </sprites>
-      <sprites name="GCE_classicgore">
-        <sprite>sprites\sprGun</sprite>
-        <sprite>sprites\sprDummy</sprite>
-        <sprite>sprites\sprClassicGore_stain</sprite>
-        <sprite>sprites\sprClassicGore</sprite>
-      </sprites>
-      <sprites name="GCE_explosion">
-        <sprite>sprites\sprPlasma</sprite>
-        <sprite>sprites\sprBeam</sprite>
-        <sprite>sprites\sprRing</sprite>
-        <sprite>sprites\sprBarrel</sprite>
-      </sprites>
-      <sprites name="GCE_fire">
-        <sprite>sprites\sprFire</sprite>
-      </sprites>
-      <sprites name="GCE_lensflare">
-        <sprite>sprites\sprLens_1</sprite>
-        <sprite>sprites\sprLens_2</sprite>
-      </sprites>
-      <sprites name="GCE_motionblur">
-        <sprite>sprites\sprTree</sprite>
-      </sprites>
-      <sprites name="GCE_overheadrain">
-        <sprite>sprites\sprDrop</sprite>
-        <sprite>sprites\sprDrop_splat</sprite>
-      </sprites>
-    </sprites>
     <sprite>sprites\planet_spr</sprite>
     <sprite>sprites\training_select_spr</sprite>
     <sprite>sprites\level1_select_spr</sprite>
@@ -116,9 +66,6 @@
   <backgrounds name="background">
     <background>background\space</background>
     <background>background\menu</background>
-    <backgrounds name="GCE3_1">
-      <background>background\bgGrass</background>
-    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -128,12 +75,7 @@
     <script>scripts\wd_message_simple.gml</script>
   </scripts>
   <fonts name="fonts">
-    <fonts name="GCE3_1">
-      <font>fonts\fnt_gui</font>
-      <font>fonts\fnt_arial</font>
-      <font>fonts\fnt_arial_small</font>
-      <font>fonts\bonusfont</font>
-    </fonts>
+    <font>fonts\bonusfont</font>
     <font>fonts\font_message</font>
     <font>fonts\font_default</font>
   </fonts>
