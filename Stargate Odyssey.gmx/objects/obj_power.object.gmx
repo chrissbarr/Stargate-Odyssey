@@ -30,6 +30,7 @@ y=view_yview+380
 if 1=2
 draw_sprite(power2_spr,round(obj_daedalus.energy/10),x+400,y+98-66)
 draw_set_color(c_white)
+draw_set_font(font_default)
 draw_text(x+394,y+80,"Energy: " + string(round(obj_daedalus.energy)) + "%")
 draw_set_color(-1)
 </string>

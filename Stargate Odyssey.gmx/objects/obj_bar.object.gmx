@@ -97,6 +97,7 @@ y=view_yview+378</string>
             <string>x=view_xview
 y=view_yview+380
 draw_sprite(bar2_spr,-1,x,y)
+draw_set_font(font_default)
 draw_text_color(x+394,y+60,string("Engine: " + obj_daedalus.engine),c_white,c_white,c_white,c_white,1)
 </string>
           </argument>

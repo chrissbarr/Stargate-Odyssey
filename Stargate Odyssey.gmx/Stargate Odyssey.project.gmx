@@ -134,7 +134,8 @@
       <font>fonts\fnt_arial_small</font>
       <font>fonts\bonusfont</font>
     </fonts>
-    <font>fonts\messagefont</font>
+    <font>fonts\font_message</font>
+    <font>fonts\font_default</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_daedalus</object>
