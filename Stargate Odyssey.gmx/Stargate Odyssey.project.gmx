@@ -136,6 +136,7 @@
       <object>objects\obj_new_game</object>
       <object>objects\obj_load_game</object>
       <object>objects\obj_quit_game</object>
+      <object>objects\obj_menu_manager</object>
     </objects>
     <objects name="Levelselect">
       <object>objects\selecttraining_obj</object>
