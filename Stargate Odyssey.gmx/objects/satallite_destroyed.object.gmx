@@ -60,7 +60,7 @@ part_type_gravity(fire2,0.05,270);
 part_type_life(fire2,80,130);
 part_type_orientation(fire2,0,360,0,0,0);
 part_type_sprite(fire2,sprPlasma,0,1,0);
-sprite_set_alpha_from_sprite(sprPlasma,sprPlasma);
+//sprite_set_alpha_from_sprite(sprPlasma,sprPlasma);
 part_type_size(fire2,0.1,0.4,0.015,0);
 part_type_speed(fire2,15,20,-5,0);
 
