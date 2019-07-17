@@ -62,6 +62,13 @@
     <sprite>sprites\training_select_spr</sprite>
     <sprite>sprites\level1_select_spr</sprite>
     <sprite>sprites\shieldrestore_spr</sprite>
+    <sprites name="GCE3_1">
+      <sprites name="GCE_explosion">
+        <sprite>sprites\sprPlasma</sprite>
+        <sprite>sprites\sprBeam</sprite>
+        <sprite>sprites\sprRing</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\space</background>
