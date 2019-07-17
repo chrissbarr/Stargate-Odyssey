@@ -138,7 +138,7 @@ alarm[2]=5</string>
             <string>tarx=target.x
 tary=target.y
 if distance_to_point(tarx,tary)&lt;1000{
-sound_play(snd_ori_sattelite)
+audio_play_sound(snd_ori_sattelite, 0, false)
 alarm[1]=15}
 else
 alarm[0]=room_speed*2</string>

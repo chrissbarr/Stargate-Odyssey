@@ -105,7 +105,7 @@ if distance_to_point(tarx,tary)&lt;450{
 if point_direction(varmissile1X,varmissile1Y,tarx,tary)&lt;direction+15{
 if point_direction(x,y,tarx,tary)&gt;direction-15{
 instance_create(varmissile1X,varmissile1Y,obj_ori_beam)
-sound_play(snd_ori_beam)}}}
+audio_play_sound(snd_ori_beam, 0, false)}}}
 alarm[0]=room_speed*2+random(room_speed*2)</string>
           </argument>
         </arguments>

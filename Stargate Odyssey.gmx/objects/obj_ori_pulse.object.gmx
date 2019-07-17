@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>direction=point_direction(x,y,instance_nearest(x,y,friendly_par).x,instance_nearest(x,y,friendly_par).y)
 speed=10
-sound_play(snd_ori_pulse)</string>
+audio_play_sound(snd_ori_pulse, 0, false)</string>
           </argument>
         </arguments>
       </action>

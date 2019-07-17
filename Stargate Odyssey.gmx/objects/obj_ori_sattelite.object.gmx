@@ -382,7 +382,7 @@ alarm[2]=5</string>
             <string>tarx=target.x
 tary=target.y
 if distance_to_point(tarx,tary)&lt;1000{
-sound_play(snd_ori_sattelite)
+audio_play_sound(snd_ori_sattelite, 0, false)
 turnspeed=0
 ii=instance_nearest(x,y,friendly_par)
 if ii.speed!=0{

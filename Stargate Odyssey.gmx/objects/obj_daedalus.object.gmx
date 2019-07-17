@@ -39,8 +39,7 @@ range=200
 auto=true
 md=true
 raillevel=1
-sound_loop(snd_daedalus_engine)
-sound_volume(snd_daedalus_engine,speed)
+engine_snd = audio_play_sound(snd_daedalus_engine, 1, true);
 alarm[1]=5
 if room_caption="Mission 4"
 upgrade=true
@@ -59,50 +58,6 @@ engine=string("Offline")
 alarm[3]=2
 alarm[4]=30
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>213</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>-1</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>snd_daedalus_engine</sound>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>snd_daedalus_engine</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -606,11 +561,7 @@ instance_create(x,y,obj_daedalusdestroyed)
 }
 canshoot=false}
 
-if speed&gt;6
-sound_volume(snd_daedalus_engine,volume*.05)
-else
-sound_volume(snd_daedalus_engine,volume*.05)
-
+audio_sound_gain(engine_snd, volume*.05, 0);
 
 varGunLength = point_distance(sprite_get_xoffset(sprite_index),sprite_get_yoffset(sprite_index),115,125);
 varGunDirection = point_direction(sprite_get_xoffset(sprite_index),sprite_get_yoffset(sprite_index),115,125);
@@ -2419,7 +2370,7 @@ if energy&gt;4{
 instance_create(varmissile2X,varmissile2Y,obj_missile)
 energy-=4
 }
-sound_play(snd_missile)
+audio_play_sound(snd_missile, 0, false)
 can_shoot=false
 alarm[0]=mr}
 

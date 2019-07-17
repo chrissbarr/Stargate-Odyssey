@@ -80,7 +80,7 @@ instance_create(x,y,hatak_destroyed)</string>
             <string>if distance_to_object(target)&lt;200{
 a=instance_create(x+random(10)-5,y+random(10)-5,obj_hatak_bolt)
 a.parid=id
-sound_play(snd_hatak_bolt)}
+audio_play_sound(snd_hatak_bolt, 0, false)}
 alarm[0]=room_speed/4+random(room_speed/4)</string>
           </argument>
         </arguments>
