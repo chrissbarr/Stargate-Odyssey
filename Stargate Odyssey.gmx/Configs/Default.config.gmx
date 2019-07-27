@@ -44,7 +44,7 @@
     <option_android_licensing_enable>0</option_android_licensing_enable>
     <option_android_licensing_key></option_android_licensing_key>
     <option_android_lint>-1</option_android_lint>
-    <option_android_major_version>1</option_android_major_version>
+    <option_android_major_version>0</option_android_major_version>
     <option_android_min_sdk_version>9</option_android_min_sdk_version>
     <option_android_minor_version>0</option_android_minor_version>
     <option_android_mmedia_ads>false</option_android_mmedia_ads>
@@ -211,7 +211,7 @@
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
     <option_colordepth>0</option_colordepth>
-    <option_display_name>GameMaker: Studio</option_display_name>
+    <option_display_name>Stargate Odyssey</option_display_name>
     <option_displayerrors>True</option_displayerrors>
     <option_ecma>0</option_ecma>
     <option_facebook_app_display_name></option_facebook_app_display_name>
@@ -233,8 +233,8 @@
     <option_html5_advertising_type>Supersonic Ads</option_html5_advertising_type>
     <option_html5_allow_fullscreen>True</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>False</option_html5_alwaysreload>
-    <option_html5_browser_title>Created with GameMaker: Studio</option_html5_browser_title>
-    <option_html5_centergame>False</option_html5_centergame>
+    <option_html5_browser_title>Stargate Odyssey</option_html5_browser_title>
+    <option_html5_centergame>True</option_html5_centergame>
     <option_html5_facebook_app_display_name></option_html5_facebook_app_display_name>
     <option_html5_facebook_appid></option_html5_facebook_appid>
     <option_html5_facebook_enable>0</option_html5_facebook_enable>
@@ -326,7 +326,7 @@
     <option_ios_iphonese_splash_portrait_png>Configs\Default\ios\iPhonesesplashPortrait.png</option_ios_iphonese_splash_portrait_png>
     <option_ios_iphonex_splash_png>Configs\Default\ios\iPhonexsplash.png</option_ios_iphonex_splash_png>
     <option_ios_iphonex_splash_portrait_png>Configs\Default\ios\iPhonexsplashPortrait.png</option_ios_iphonex_splash_portrait_png>
-    <option_ios_major_version>1</option_ios_major_version>
+    <option_ios_major_version>0</option_ios_major_version>
     <option_ios_minor_version>0</option_ios_minor_version>
     <option_ios_orient_landscape>-1</option_ios_orient_landscape>
     <option_ios_orient_landscape_right>-1</option_ios_orient_landscape_right>
@@ -359,7 +359,7 @@
     <option_linux_sync>0</option_linux_sync>
     <option_linux_texture_page>2048</option_linux_texture_page>
     <option_linux_version_build>0</option_linux_version_build>
-    <option_linux_version_major>1</option_linux_version_major>
+    <option_linux_version_major>0</option_linux_version_major>
     <option_linux_version_minor>0</option_linux_version_minor>
     <option_loadalpha>255</option_loadalpha>
     <option_loadimage>nil</option_loadimage>
@@ -377,7 +377,7 @@
     <option_mac_fullscreen>0</option_mac_fullscreen>
     <option_mac_icon_png>Configs\Default\mac\icon512.png</option_mac_icon_png>
     <option_mac_interpolate>-1</option_mac_interpolate>
-    <option_mac_major_version>1</option_mac_major_version>
+    <option_mac_major_version>0</option_mac_major_version>
     <option_mac_menu_dock>0</option_mac_menu_dock>
     <option_mac_minor_version>0</option_mac_minor_version>
     <option_mac_output_dir>~/GameMaker-Studio/Stargate Odyssey</option_mac_output_dir>
@@ -493,7 +493,7 @@
     <option_version_company></option_version_company>
     <option_version_copyright></option_version_copyright>
     <option_version_description></option_version_description>
-    <option_version_major>1</option_version_major>
+    <option_version_major>0</option_version_major>
     <option_version_minor>0</option_version_minor>
     <option_version_product></option_version_product>
     <option_version_release>0</option_version_release>
@@ -514,7 +514,7 @@
     <option_win8_logo>Configs\Default\Windows8\logos\logo150.png</option_win8_logo>
     <option_win8_logo_background_colour>#000000</option_win8_logo_background_colour>
     <option_win8_logo_foreground_text>light</option_win8_logo_foreground_text>
-    <option_win8_major_version>1</option_win8_major_version>
+    <option_win8_major_version>0</option_win8_major_version>
     <option_win8_microphone_capable>0</option_win8_microphone_capable>
     <option_win8_minor_version>0</option_win8_minor_version>
     <option_win8_native_certificate_location>Win8NativeRunner_TemporaryKey.pfx</option_win8_native_certificate_location>
@@ -578,7 +578,7 @@
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
     <option_windows_mainor_version>0</option_windows_mainor_version>
-    <option_windows_major_version>1</option_windows_major_version>
+    <option_windows_major_version>0</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
     <option_windows_product_info></option_windows_product_info>
     <option_windows_release_version>0</option_windows_release_version>
@@ -638,7 +638,7 @@
     <option_winphone_interpolate>-1</option_winphone_interpolate>
     <option_winphone_landscape_allowed>-1</option_winphone_landscape_allowed>
     <option_winphone_landscape_flipped_allowed>-1</option_winphone_landscape_flipped_allowed>
-    <option_winphone_major_version>1</option_winphone_major_version>
+    <option_winphone_major_version>0</option_winphone_major_version>
     <option_winphone_minor_version>0</option_winphone_minor_version>
     <option_winphone_portrait_allowed>-1</option_winphone_portrait_allowed>
     <option_winphone_publisher>YourPublisherName</option_winphone_publisher>
