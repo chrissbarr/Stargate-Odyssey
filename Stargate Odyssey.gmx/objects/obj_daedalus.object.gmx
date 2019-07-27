@@ -297,6 +297,9 @@ energy+=2
                     bullet.team = team;
                 }
             }
+            
+            ds_list_destroy(railgun_coords_x);
+            ds_list_destroy(railgun_coords_y);
         }
     }
 }
@@ -1995,7 +1998,7 @@ event_perform(ev_other,ev_user2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_add(point_direction(other.x,other.y,x,y),other.speed/4)
+            <string>motion_add(point_direction(other.x, other.y, x, y), 0.5);
 </string>
           </argument>
         </arguments>
