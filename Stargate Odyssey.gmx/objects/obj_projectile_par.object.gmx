@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,58 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var spawn_object = obj_hatak;
+            <string>team = -1;
+damage_shield = 0;
+damage_hull = 0;
 
-team_count[0] = 0;
-team_count[1] = 0;
-
-if (instance_number(spawn_object) &lt; 4) 
-{    
-    var spawnX, spawnY;    
-    a = irandom(3);
-    
-    switch (a)
-    {
-        case 0:
-            spawnX = random(room_width);
-            spawnY = -400;
-            break;
-        case 1:
-            spawnX = random(room_width);
-            spawnY = room_height + 400;
-            break;
-        case 2:
-            spawnX = -400;
-            spawnY = random(room_height);
-            break;
-        case 3:
-            spawnX = room_width + 400;
-            spawnY = random(room_height);
-            break;
-    }
-    
-    var new_hatak = instance_create(spawnX, spawnY, obj_hatak);    
-
-    with (spawn_object) 
-    {
-        other.team_count[team] += 1;
-    }
-    
-    if (team_count[0] &lt; team_count[1])
-    {
-        new_hatak.team = 0;
-    }
-    else
-    {
-        new_hatak.team = 1;
-    }
-}
+alarm[0] = room_speed * 5;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -93,10 +52,7 @@ if (instance_number(spawn_object) &lt; 4)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_dkgray);
-draw_set_font(font_default);
-
-draw_text(view_wview[0] - string_width(M_VERSION), view_hview[0] - string_height(M_VERSION), M_VERSION);
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>

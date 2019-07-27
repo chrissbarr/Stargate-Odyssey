@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>enemy_par</parentName>
+  <parentName>obj_ai_par</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,13 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shield=40
-hp=20
-max_speed=4
-turn_speed=1
-image_speed=0
-alarm[0]=room_speed/2+random(room_speed/4)
-friction=0.1</string>
+            <string>event_inherited();
+
+shield = 40;
+shield_radius = 77;
+hp = 20;
+max_speed = 4;
+turn_speed = 1;
+image_speed = 0;
+friction = 0.1;
+
+team = 1;
+
+can_fire = true;
+</string>
           </argument>
         </arguments>
       </action>
@@ -54,10 +61,13 @@ friction=0.1</string>
           <argument>
             <kind>1</kind>
             <string>repeat 5
-instance_create(x,y,hatak_debris_peice_obj)
-instance_create(x,y,hatak_destroyed)
-a=instance_create(x,y,obj_energybonus)
-a.bonus=20
+{
+    var debris = instance_create(x, y, hatak_debris_peice_obj);
+    debris.hspeed += hspeed;
+    debris.vspeed += vspeed;
+}
+
+instance_create(x, y, hatak_destroyed);
 </string>
           </argument>
         </arguments>
@@ -80,10 +90,8 @@ a.bonus=20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_daedalus)&lt;200{
-instance_create(x+random(10)-5,y+random(10)-5,obj_hatak_bolt)
-audio_play_sound(snd_hatak_bolt, 0, false)}
-alarm[0]=room_speed/4+random(room_speed/4)</string>
+            <string>can_fire = true;
+</string>
           </argument>
         </arguments>
       </action>
@@ -105,18 +113,115 @@ alarm[0]=room_speed/4+random(room_speed/4)</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=turn_speed
-if shield&lt;1
-image_index=1
-if hp&lt;0
-instance_destroy()
-image_speed=0
+            <string>image_angle += turn_speed;
 
-if distance_to_object(obj_daedalus)&gt;190
-motion_add(point_direction(x,y,obj_daedalus.x,obj_daedalus.y),.2)
+if (shield &lt; 1)
+{
+    image_index=1
+}
 
-if speed&gt;max_speed
-speed=max_speed</string>
+if (hp &lt; 0)
+{
+    instance_destroy()
+}
+
+image_speed = 0;
+
+target = ai_get_nearest_enemy();
+
+if (target != noone &amp;&amp; instance_exists(target)) 
+{
+    if (distance_to_object(target) &gt; 190)
+    {
+        motion_add(point_direction(x, y, target.x, target.y), 0.1);
+    }
+    
+    if (distance_to_object(target) &lt; 100)
+    {
+        motion_add(point_direction(x, y, target.x, target.y), -0.1);
+    }
+    
+    if (can_fire) //(distance_to_object(target) &lt; 200) &amp;&amp; 
+    {
+        // fire
+        var fire_x, fire_y;
+        fire_x = x + random_range(-5, 5);
+        fire_y = y + random_range(-5, 5);
+        var bullet = instance_create(fire_x, fire_y, obj_hatak_bolt);
+        bullet.direction = point_direction(fire_x, fire_y, target.x, target.y);
+        bullet.team = team;
+        audio_play_sound(snd_hatak_bolt, 0, false);
+        
+        // begin waiting for next firing time
+        can_fire = false;
+        alarm[0] = irandom_range(room_speed / 4, room_speed);
+    }
+}
+
+friend = ai_get_nearest_ally();
+
+if (friend != noone &amp;&amp; instance_exists(friend)) 
+{
+    if (distance_to_object(friend) &gt; 150)
+    {
+        motion_add(point_direction(x, y, friend.x, friend.y), 0.1);
+    }
+    
+    if (distance_to_object(friend) &lt; 50)
+    {
+        motion_add(point_direction(x, y, friend.x, friend.y), -0.1);
+    }
+}
+
+if (instance_exists(obj_ai_attract))
+{
+    var nearest_attract = instance_nearest(x, y, obj_ai_attract);
+    if (distance_to_object(nearest_attract) &gt; 20)
+    {
+        motion_add(point_direction(x, y, nearest_attract.x, nearest_attract.y), 0.1);
+    }
+}
+
+if (speed &gt; max_speed) {
+    speed = max_speed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_projectile_par">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (other.team != team) 
+{
+    if (shield &gt; 0) 
+    {
+        shield -= other.damage_shield;
+        effect_create_above(ef_spark, other.x, other.y, 0, c_orange);
+    }
+    else
+    {
+        hp -= other.damage_hull;
+    }
+    
+    instance_destroy(other);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -849,32 +954,6 @@ speed=max_speed</string>
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_hatak">
-      <action>
-        <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_missile">
       <action>
         <libid>1</libid>
@@ -1148,9 +1227,24 @@ speed=max_speed</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(hatak_spr,-1,x,y,1,1,image_angle,c_white,1)
-draw_healthbar(x,y,x+50,y+5,shield,c_red,c_blue,c_blue,180,false,true)
-draw_healthbar(x,y+5,x+50,y+10,hp,c_green,c_red,c_blue,180,false,true)</string>
+            <string>if (shield &gt; 0) 
+{
+    draw_set_color(c_orange);
+    draw_set_circle_precision(64);
+    draw_circle(x, y, shield_radius, true);
+    sprite_index = hatak_shield_spr;
+}
+else
+{
+    sprite_index = hatak_spr;
+}
+
+draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, c_white, 1);
+draw_healthbar(x, y, x + 50, y + 5, shield, c_red, c_blue, c_blue, 180, false, true);
+draw_healthbar(x, y + 5, x + 50, y + 10, hp, c_green, c_red, c_blue, 180, false, true);
+
+
+</string>
           </argument>
         </arguments>
       </action>

@@ -25,11 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=random(4)
-image_speed=0
-direction=random(360)
-speed=.5+random(1)
-turnspeed=random(4)-2</string>
+            <string>image_index = random(4);
+image_speed = 0;
+direction = random(360);
+speed = random_range(1.0, 1.5);
+turnspeed = random_range(-2, 2);
+friction = 0.005;
+</string>
           </argument>
         </arguments>
       </action>
@@ -51,7 +53,16 @@ turnspeed=random(4)-2</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=turnspeed</string>
+            <string>image_angle += turnspeed;
+
+if (image_alpha &gt; 0) {
+    image_alpha -= 0.005;
+} 
+else 
+{
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>

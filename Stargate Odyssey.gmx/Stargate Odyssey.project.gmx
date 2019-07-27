@@ -23,6 +23,7 @@
     <sprite>sprites\ori_beam_trail2_spr</sprite>
     <sprite>sprites\ancient_beam_trail_spr</sprite>
     <sprite>sprites\hatak_spr</sprite>
+    <sprite>sprites\hatak_shield_spr</sprite>
     <sprite>sprites\hatak_bolt_spr</sprite>
     <sprite>sprites\death_glider_bolt_spr</sprite>
     <sprite>sprites\rail_gun_round_spr</sprite>
@@ -80,6 +81,8 @@
     <script>scripts\safties_override_scr.gml</script>
     <script>scripts\osm.gml</script>
     <script>scripts\wd_message_simple.gml</script>
+    <script>scripts\ai_get_nearest_enemy.gml</script>
+    <script>scripts\ai_get_nearest_ally.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\bonusfont</font>
@@ -98,7 +101,6 @@
     <object>objects\obj_ancient_beam_trail</object>
     <object>objects\enemy_par</object>
     <object>objects\obj_hatak</object>
-    <object>objects\menu_hatak_obj</object>
     <object>objects\obj_hatak_friend</object>
     <object>objects\obj_hatak_earth</object>
     <object>objects\obj_hatak_bolt</object>
@@ -151,6 +153,9 @@
     <object>objects\obj_energybonus</object>
     <object>objects\obj_daedalusdestroyed</object>
     <object>objects\obj_hudtextdisplay</object>
+    <object>objects\obj_ai_par</object>
+    <object>objects\obj_projectile_par</object>
+    <object>objects\obj_ai_attract</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
