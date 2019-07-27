@@ -52,9 +52,9 @@
   </views>
   <instances>
     <instance objName="obj_hatak" x="112" y="240" name="inst_9F4EEDEC" locked="0" code="team = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hatak" x="80" y="416" name="inst_4F8C5F28" locked="0" code="team = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hatak" x="80" y="416" name="inst_4F8C5F28" locked="0" code="team = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hatak" x="464" y="176" name="inst_6B5E1B01" locked="0" code="team = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hatak" x="496" y="400" name="inst_743C9C71" locked="0" code="team = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hatak" x="496" y="400" name="inst_743C9C71" locked="0" code="team = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="friendly_par" x="0" y="0" name="inst_5E3224E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_new_game" x="320" y="288" name="inst_5EBAF4CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_load_game" x="320" y="352" name="inst_E6602E5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

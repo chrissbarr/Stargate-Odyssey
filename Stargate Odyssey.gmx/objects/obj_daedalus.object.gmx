@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>friendly_par</parentName>
+  <parentName>obj_ai_par</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>energy=100
+            <string>event_inherited();
+
+team = 0;
+
+energy=100
 image_speed=0
 mr=room_speed*1/2
 max_speed=6
@@ -245,40 +249,58 @@ energy+=2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if energy&gt;0{
-if instance_exists(enemy_par)
-t=instance_nearest(x,y,enemy_par)
-if distance_to_object(t)&lt;range
-if upgrade=false
-if auto=true{
-a=instance_create(varrail1X,varrail1Y,obj_rail_gun_round)
-b=instance_create(varrail2X,varrail2Y,obj_rail_gun_round)
-a.direction=point_direction(a.x,a.y,instance_nearest(a.x,a.y,enemy_par).x,instance_nearest(a.x,a.y,enemy_par).y)
-b.direction=point_direction(b.x,b.y,instance_nearest(b.x,b.y,enemy_par).x,instance_nearest(b.x,b.y,enemy_par).y)
-a.speed=10
-b.speed=10
-if raillevel=2
+            <string>if (energy &gt; 0) 
 {
-c=instance_create(varrail3X,varrail3Y,obj_rail_gun_round)
-d=instance_create(varrail4X,varrail4Y,obj_rail_gun_round)
-c.direction=point_direction(c.x,c.y,instance_nearest(c.x,c.y,enemy_par).x,instance_nearest(c.x,c.y,enemy_par).y)
-d.direction=point_direction(d.x,d.y,instance_nearest(d.x,d.y,enemy_par).x,instance_nearest(d.x,d.y,enemy_par).y)
-c.speed=10
-d.speed=10
+    var target = ai_get_nearest_enemy();
+    if (target != noone &amp;&amp; instance_exists(target))
+    {
+        if (distance_to_object(target) &lt; range)
+        {
+            var railgun_coords_x = ds_list_create();
+            var railgun_coords_y = ds_list_create();
+            
+            ds_list_add(railgun_coords_x, 112);
+            ds_list_add(railgun_coords_y, 130);
+            ds_list_add(railgun_coords_x, 112);
+            ds_list_add(railgun_coords_y, 115);
+         
+            if (raillevel == 2)
+            {
+                ds_list_add(railgun_coords_x, 68);
+                ds_list_add(railgun_coords_y, 111);
+                ds_list_add(railgun_coords_x, 68);
+                ds_list_add(railgun_coords_y, 134);
+            }
+            
+            if (auto or (!auto &amp;&amp; keyboard_check(vk_space)))
+            {
+                for (i = 0; i &lt; ds_list_size(railgun_coords_x); i++)
+                {
+                    var aimX, aimY;
+                    if (!auto &amp;&amp; keyboard_check(vk_space))
+                    {
+                        aimX = mouse_x;
+                        aimY = mouse_y;
+                    }
+                    else
+                    {
+                        aimX = target.x;
+                        aimY = target.y;
+                    }
+                    
+                    var gunLength = point_distance(sprite_get_xoffset(sprite_index), sprite_get_yoffset(sprite_index), railgun_coords_x[| i], railgun_coords_y[| i]);
+                    var gunDir = point_direction(sprite_get_xoffset(sprite_index), sprite_get_yoffset(sprite_index), railgun_coords_x[| i], railgun_coords_y[| i]);
+                    var gunX = x + lengthdir_x(gunLength, image_angle + gunDir);
+                    var guny = y + lengthdir_y(gunLength, image_angle + gunDir);
+                    var bullet = instance_create(gunX, guny, obj_rail_gun_round);
+                    bullet.direction = point_direction(bullet.x, bullet.y, aimX, aimY);
+                    bullet.team = team;
+                }
+            }
+        }
+    }
 }
-}
-else
-if upgrade=false
-if keyboard_check(vk_space){
-a=instance_create(varrail1X,varrail1Y,obj_rail_gun_round)
-b=instance_create(varrail2X,varrail2Y,obj_rail_gun_round)
-a.direction=point_direction(a.x,a.y,mouse_x,mouse_y)
-b.direction=point_direction(b.x,b.y,mouse_x,mouse_y)
-a.speed=10
-b.speed=10
-}
-}
-alarm[3]=2+random(3)
+alarm[3] = 2 + random(3);
 
 </string>
           </argument>
@@ -598,7 +620,7 @@ text=string("Congratulations.")
 wd_message_simple(text)
 room_goto_next()}
 if room_caption="Mission 1"
-if instance_number(enemy_par)=0{
+if instance_number(obj_hatak)=0{
 text=string("The threat has been eliminated, and Earth is safe. Well done.")
 wd_message_simple(text)
 room_goto_next()}
@@ -1959,25 +1981,22 @@ event_perform(ev_other,ev_user2)
     <event eventtype="4" ename="obj_hatak">
       <action>
         <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
+            <kind>1</kind>
+            <string>motion_add(point_direction(other.x,other.y,x,y),other.speed/4)
+</string>
           </argument>
         </arguments>
       </action>

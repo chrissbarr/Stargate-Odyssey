@@ -35,6 +35,8 @@ turn_speed = 1;
 image_speed = 0;
 friction = 0.1;
 
+range_max = 200;
+
 team = 1;
 
 can_fire = true;
@@ -141,7 +143,7 @@ if (target != noone &amp;&amp; instance_exists(target))
         motion_add(point_direction(x, y, target.x, target.y), -0.1);
     }
     
-    if (can_fire) //(distance_to_object(target) &lt; 200) &amp;&amp; 
+    if (can_fire &amp;&amp; distance_to_object(target) &lt; range_max)
     {
         // fire
         var fire_x, fire_y;
@@ -184,42 +186,6 @@ if (instance_exists(obj_ai_attract))
 
 if (speed &gt; max_speed) {
     speed = max_speed;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_projectile_par">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (other.team != team) 
-{
-    if (shield &gt; 0) 
-    {
-        shield -= other.damage_shield;
-        effect_create_above(ef_spark, other.x, other.y, 0, c_orange);
-    }
-    else
-    {
-        hp -= other.damage_hull;
-    }
-    
-    instance_destroy(other);
 }
 </string>
           </argument>

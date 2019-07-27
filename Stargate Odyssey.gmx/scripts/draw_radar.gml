@@ -22,7 +22,7 @@
     
     with (obj_daedalus) draw_sprite(blue_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
     with (friendly_par) draw_sprite(green_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (enemy_par) draw_sprite(red_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
+    with (obj_hatak) draw_sprite(red_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
     with (obj_missile) draw_sprite(missile_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
     with (obj_rail_gun_round) draw_sprite(missile_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
     with (obj_hatak_bolt) draw_sprite(hatak_bolt_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));

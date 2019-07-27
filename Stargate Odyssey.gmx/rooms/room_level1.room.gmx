@@ -55,9 +55,9 @@ wd_message_simple(text)</code>
     <instance objName="obj_earth" x="8800" y="7760" name="inst_88451A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_daedalus" x="8816" y="7776" name="inst_D73DED3F" locked="0" code="direction=135" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moon" x="112" y="208" name="inst_21D2FEF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hatak_earth" x="800" y="256" name="inst_37254EB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hatak_earth" x="656" y="448" name="inst_13C55DEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hatak_earth" x="416" y="512" name="inst_297FA96B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hatak" x="800" y="256" name="inst_37254EB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hatak" x="656" y="448" name="inst_13C55DEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hatak" x="416" y="512" name="inst_297FA96B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_radar" x="32" y="48" name="inst_690B29AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
