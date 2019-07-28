@@ -33,8 +33,8 @@
     //however we check for this anways, and fix it
     //cause X-Unit is just good like that
     
-    if (draw_x==0) draw_x = room_wview-100;
-    if (draw_y==0) draw_y = 0;
+    //if (draw_x==0) draw_x = view_wview[0]-100;
+    //if (draw_y==0) draw_y = 0;
     //note that if we are purposly drawing at 0,0, this wont mess it up, it will jsut repeat this over and over, giving it a 0 value each time the draw event happens
     
     draw_radar(draw_x,draw_y);
