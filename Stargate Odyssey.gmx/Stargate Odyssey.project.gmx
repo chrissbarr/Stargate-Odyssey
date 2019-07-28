@@ -123,15 +123,7 @@
       <object>objects\obj_daedalusdestroyed</object>
     </objects>
     <objects name="interface">
-      <object>objects\obj_radar</object>
-      <object>objects\obj_bar</object>
-      <object>objects\obj_health</object>
-      <object>objects\obj_health2</object>
-      <object>objects\obj_power</object>
-      <object>objects\obj_power2</object>
-      <object>objects\obj_power3</object>
-      <object>objects\obj_auto</object>
-      <object>objects\obj_missile_control</object>
+      <object>objects\obj_hud</object>
     </objects>
     <objects name="menu">
       <objects name="level_select">
@@ -173,7 +165,6 @@
       <object>objects\obj_moon</object>
       <object>objects\obj_supergate</object>
     </objects>
-    <object>objects\shieldrestore_obj</object>
     <object>objects\obj_energybonus</object>
     <objects name="level_controllers">
       <object>objects\obj_level_controller_par</object>

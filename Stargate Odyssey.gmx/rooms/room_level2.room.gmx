@@ -55,7 +55,6 @@ wd_message_simple(text)</code>
     <instance objName="obj_planet1" x="2992" y="2048" name="inst_7F000204" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_daedalus" x="8816" y="7776" name="inst_6AA7AE0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ori_sattelite" x="3168" y="2032" name="inst_D0CAD59E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_radar" x="0" y="0" name="inst_81E3C192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
