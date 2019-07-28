@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>event_inherited();
 
-shield = 40;
+shield = 80;
 shield_radius = 77;
-hp = 20;
+hp = 30;
 max_speed = 4;
 turn_speed = 1;
 image_speed = 0;
@@ -40,6 +40,16 @@ range_max = 200;
 team = 1;
 
 can_fire = true;
+
+gun_coords_x = ds_list_create();
+gun_coords_y = ds_list_create();
+
+ds_list_add(gun_coords_x, 110);
+ds_list_add(gun_coords_y, 58);
+ds_list_add(gun_coords_x, 77);
+ds_list_add(gun_coords_y, 117);
+ds_list_add(gun_coords_x, 43);
+ds_list_add(gun_coords_y, 59);
 </string>
           </argument>
         </arguments>
@@ -133,9 +143,9 @@ target = ai_get_nearest_enemy();
 
 if (target != noone &amp;&amp; instance_exists(target)) 
 {
-    if (distance_to_object(target) &gt; 190)
+    if (distance_to_object(target) &gt; range_max * 0.8)
     {
-        motion_add(point_direction(x, y, target.x, target.y), 0.1);
+        motion_add(point_direction(x, y, target.x, target.y), 0.2);
     }
     
     if (distance_to_object(target) &lt; 100)
@@ -145,10 +155,15 @@ if (target != noone &amp;&amp; instance_exists(target))
     
     if (can_fire &amp;&amp; distance_to_object(target) &lt; range_max)
     {
-        // fire
-        var fire_x, fire_y;
-        fire_x = x + random_range(-5, 5);
-        fire_y = y + random_range(-5, 5);
+        // pick a turret to fire from
+        var fire_x, fire_y;        
+        var random_gun_index = irandom(ds_list_size(gun_coords_x) - 1);        
+        var gunLength = point_distance(sprite_get_xoffset(sprite_index), sprite_get_yoffset(sprite_index), gun_coords_x[| random_gun_index], gun_coords_y[| random_gun_index]);
+        var gunDir = point_direction(sprite_get_xoffset(sprite_index), sprite_get_yoffset(sprite_index), gun_coords_x[| random_gun_index], gun_coords_y[| random_gun_index]);
+        var fire_x = x + lengthdir_x(gunLength, image_angle + gunDir);
+        var fire_y = y + lengthdir_y(gunLength, image_angle + gunDir);
+        
+        // create the projectile
         var bullet = instance_create(fire_x, fire_y, obj_hatak_bolt);
         bullet.direction = point_direction(fire_x, fire_y, target.x, target.y);
         bullet.team = team;
@@ -156,7 +171,7 @@ if (target != noone &amp;&amp; instance_exists(target))
         
         // begin waiting for next firing time
         can_fire = false;
-        alarm[0] = irandom_range(room_speed / 4, room_speed);
+        alarm[0] = irandom_range(room_speed / 4, room_speed / 2);
     }
 }
 
