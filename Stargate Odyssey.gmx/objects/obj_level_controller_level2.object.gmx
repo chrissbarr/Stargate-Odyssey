@@ -27,8 +27,10 @@
             <kind>1</kind>
             <string>event_inherited();
 
-ds_list_add(messages, "Earth's deep space radar has detected three Gou'ald Hat'ak class motherships approaching Earth.");
-ds_list_add(messages, "Your mission is to intercept and destroy them. Good luck.");
+ds_list_add(messages, "StarGate Command has recieved a message from the planet Tegolas.");
+ds_list_add(messages, "They have been visited by a Prior of the Ori, and been instructed by him to build a satellite weapon.");
+ds_list_add(messages, "The satellite has been completed, and The Rand Protectorate has begun using it against Caladonia.");
+ds_list_add(messages, "Your mission is to destroy this weapon. Good luck!");
 </string>
           </argument>
         </arguments>
@@ -76,14 +78,14 @@ ds_list_add(messages, "Your mission is to intercept and destroy them. Good luck.
             <kind>1</kind>
             <string>event_inherited();
 
-if (instance_number(obj_hatak) == 0)
+if (instance_number(obj_ori_sattelite) == 0)
 {
-    var msg = "The threat has been eliminated, and Earth is safe. Well done.";
+    var msg = "The Ori sattelite has been destroyed. Well done.";
     if (ds_list_find_index(messages, msg) == -1)
     {
         ds_list_add(messages, msg);
         alarm[0] = room_speed * 5;
-    }
+    }    
 }
 </string>
           </argument>
