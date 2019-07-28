@@ -132,7 +132,6 @@
       <object>objects\obj_power3</object>
       <object>objects\obj_auto</object>
       <object>objects\obj_missile_control</object>
-      <object>objects\obj_hudtextdisplay</object>
     </objects>
     <objects name="menu">
       <objects name="level_select">
@@ -176,6 +175,11 @@
     </objects>
     <object>objects\shieldrestore_obj</object>
     <object>objects\obj_energybonus</object>
+    <objects name="level_controllers">
+      <object>objects\obj_level_controller_par</object>
+      <object>objects\obj_level_controller_training</object>
+      <object>objects\obj_level_controller_level1</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

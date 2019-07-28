@@ -317,27 +317,6 @@ else
 {
     missile_reload_remaining -= M_DELTA;
 }
-
-
-if room_caption="Weapons Test"
-if instance_number(obj_asteroid_target)=0{
-text=string("Congratulations.")
-wd_message_simple(text)
-room_goto_next()}
-if room_caption="Mission 1"
-if instance_number(obj_hatak)=0{
-text=string("The threat has been eliminated, and Earth is safe. Well done.")
-wd_message_simple(text)
-room_goto_next()}
-
-if room=room_training
-{
-if distance_to_object(instance_nearest(x,y,obj_asteroid_target))&lt;300
-with obj_hudtextdisplay
-event_perform(ev_other,ev_user2)
-}
-
-
 </string>
           </argument>
         </arguments>
@@ -390,28 +369,6 @@ room_goto_next()</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>333</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_save_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>2</kind>
-            <string>savegame</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="9" enumb="79">
       <action>
         <libid>1</libid>
@@ -452,22 +409,6 @@ room_goto_next()</string>
             <string>0</string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="78">
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>
