@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>messages = ds_list_create();
 message_index = 0;
-message_countdown_duration = 2.0;
+message_countdown_duration = 4.0;
 message_countdown = message_countdown_duration;
 
 </string>
@@ -117,7 +117,10 @@ if (ds_list_size(messages) &gt; message_index + 1) {
             <kind>1</kind>
             <string>draw_set_font(font_message);
 draw_set_color(c_white);
-draw_text(20, 20, messages[| message_index]);
+var textX = 20;
+var textY = 20;
+var textWidth = view_wview[0] - textX * 2;
+draw_text_ext(textX, textY, messages[| message_index], -1, textWidth);
 </string>
           </argument>
         </arguments>
