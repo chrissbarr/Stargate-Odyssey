@@ -64,6 +64,16 @@ if (instance_number(obj_hatak) == 0)
         nextlevel_countdown = 5.0;
     }
 }
+
+if (instance_number(obj_earth) == 0)
+{
+    var msg = "Well, that's not good. Arghk- ***EXPLOSION***";
+    if (ds_list_find_index(messages, msg) == -1)
+    {
+        ds_list_add(messages, msg);
+        gameover_countdown = 5.0;
+    }
+}
 </string>
           </argument>
         </arguments>
