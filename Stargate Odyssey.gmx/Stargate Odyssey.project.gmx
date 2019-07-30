@@ -89,7 +89,7 @@
   </fonts>
   <objects name="objects">
     <objects name="entities">
-      <object>objects\obj_ai_par</object>
+      <object>objects\obj_entity_par</object>
       <object>objects\obj_ai_attract</object>
       <object>objects\obj_daedalus</object>
       <object>objects\obj_hatak</object>

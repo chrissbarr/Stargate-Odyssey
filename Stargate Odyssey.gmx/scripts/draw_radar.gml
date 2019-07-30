@@ -20,7 +20,7 @@
     //we are drawing it at the origin of the radar (top-left corner)...
     //... PLUS its position in the room scaled down for the radar
     
-    with (obj_ai_par) 
+    with (obj_entity_par) 
     {
         var col;
         

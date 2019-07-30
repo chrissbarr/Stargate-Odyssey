@@ -1,7 +1,7 @@
 var ds = ds_priority_create();
 ds_priority_add(ds, noone, 100000000);
 
-with (obj_ai_par) 
+with (obj_entity_par) 
 {
     if (team != other.team)
     {
