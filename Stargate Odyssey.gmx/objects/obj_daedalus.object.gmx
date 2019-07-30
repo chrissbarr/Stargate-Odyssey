@@ -165,7 +165,7 @@ engine = "Offline";
 var max_speed = max_speed_impulse;
 engine = "Offline";
 
-if (keyboard_check(vk_up))
+if (keyboard_check(vk_up) || keyboard_check(ord('W')))
 {
     if (keyboard_check(vk_shift) &amp;&amp; energy &gt; 10)
     {
@@ -182,18 +182,18 @@ if (keyboard_check(vk_up))
     speed += acceleration;
 }
 
-if (keyboard_check(vk_down))
+if (keyboard_check(vk_down) || keyboard_check(ord('S')))
 {
     engine = "Impulse";
     speed -= deceleration;
 }
 
-if (keyboard_check(vk_left))
+if (keyboard_check(vk_left) || keyboard_check(ord('A')))
 {
     direction += turn_rate;
 }
 
-if (keyboard_check(vk_right))
+if (keyboard_check(vk_right) || keyboard_check(ord('D')))
 {
     direction -= turn_rate;
 }
