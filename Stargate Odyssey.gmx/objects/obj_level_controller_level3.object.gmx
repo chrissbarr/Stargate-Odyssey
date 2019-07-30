@@ -29,29 +29,8 @@
 
 ds_list_add(messages, "The Free Jaffa have detected another SuperGate, and four Ori ships have entered the galaxy.");
 ds_list_add(messages, "Destroy them before they are a threat to Earth. Godspeed.");
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_goto(room_menu);
+
+next_room = room_menu;
 </string>
           </argument>
         </arguments>
@@ -82,7 +61,7 @@ if (instance_number(obj_ori_ship) == 0)
     if (ds_list_find_index(messages, msg) == -1)
     {
         ds_list_add(messages, msg);
-        alarm[0] = room_speed * 5;
+        nextlevel_countdown = 5.0;
     }    
 }
 </string>

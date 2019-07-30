@@ -153,7 +153,6 @@
   <rooms name="rooms">
     <room>rooms\room_menu</room>
     <room>rooms\room_level_select</room>
-    <room>rooms\room_load</room>
     <room>rooms\room_training</room>
     <room>rooms\room_level1</room>
     <room>rooms\room_level2</room>
