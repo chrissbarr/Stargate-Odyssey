@@ -98,7 +98,8 @@ energy = clamp(energy, 0, energy_max);
         shield -= other.damage_shield;
         effect_create_above(ef_spark, other.x, other.y, 0, c_orange);
     }
-    else
+    
+    if (shield &lt;= 0)
     {
         hp -= other.damage_hull;
     }
