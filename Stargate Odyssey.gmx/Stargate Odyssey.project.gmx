@@ -88,9 +88,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\draw_radar.gml</script>
-    <script>scripts\safties_override_scr.gml</script>
-    <script>scripts\osm.gml</script>
-    <script>scripts\wd_message_simple.gml</script>
     <script>scripts\ai_get_nearest_enemy.gml</script>
     <script>scripts\ai_get_nearest_ally.gml</script>
   </scripts>
@@ -105,17 +102,11 @@
       <object>objects\obj_ai_attract</object>
       <object>objects\obj_daedalus</object>
       <object>objects\obj_hatak</object>
-      <object>objects\obj_hatak_friend</object>
-      <object>objects\obj_hatak_earth</object>
       <object>objects\obj_death_glider</object>
       <object>objects\obj_ori_sattelite</object>
       <object>objects\obj_ori_ship</object>
-      <object>objects\obj_ori_ship2</object>
       <object>objects\obj_asteroid_target</object>
       <object>objects\obj_ancient_sattelite</object>
-      <object>objects\enemy_par</object>
-      <object>objects\fighter_par</object>
-      <object>objects\friendly_par</object>
       <object>objects\hatak_debris_peice_obj</object>
       <object>objects\satallite_destroyed</object>
       <object>objects\hatak_destroyed</object>
@@ -139,15 +130,11 @@
       <objects name="projectiles">
         <object>objects\obj_projectile_par</object>
         <object>objects\obj_missile</object>
-        <object>objects\obj_missile2</object>
         <object>objects\obj_hatak_bolt</object>
-        <object>objects\obj_hatak_bolt2</object>
         <object>objects\hatak_bolt_glow</object>
         <object>objects\obj_smoke</object>
-        <object>objects\obj_smoke2</object>
         <object>objects\obj_ori_beam_trail</object>
         <object>objects\obj_asgard_beam_trail</object>
-        <object>objects\obj_ori_beam_trail2</object>
         <object>objects\obj_ancient_beam_trail</object>
         <object>objects\obj_ori_pulse</object>
         <object>objects\obj_death_glider_bolt</object>
@@ -161,11 +148,9 @@
     <objects name="scenery">
       <object>objects\obj_earth</object>
       <object>objects\obj_planet1</object>
-      <object>objects\obj_planet2</object>
       <object>objects\obj_moon</object>
       <object>objects\obj_supergate</object>
     </objects>
-    <object>objects\obj_energybonus</object>
     <objects name="level_controllers">
       <object>objects\obj_level_controller_par</object>
       <object>objects\obj_level_controller_training</object>
