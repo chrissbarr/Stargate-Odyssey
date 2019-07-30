@@ -171,6 +171,7 @@
       <object>objects\obj_level_controller_training</object>
       <object>objects\obj_level_controller_level1</object>
       <object>objects\obj_level_controller_level2</object>
+      <object>objects\obj_level_controller_level3</object>
     </objects>
   </objects>
   <rooms name="rooms">
