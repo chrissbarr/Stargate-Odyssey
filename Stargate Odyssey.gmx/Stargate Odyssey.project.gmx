@@ -94,15 +94,15 @@
       <object>objects\obj_daedalus</object>
       <object>objects\obj_hatak</object>
       <object>objects\obj_death_glider</object>
-      <object>objects\obj_ori_sattelite</object>
+      <object>objects\obj_ori_satellite</object>
       <object>objects\obj_ori_ship</object>
       <object>objects\obj_asteroid_target</object>
       <object>objects\obj_ancient_sattelite</object>
-      <object>objects\hatak_debris_peice_obj</object>
-      <object>objects\satallite_destroyed</object>
-      <object>objects\hatak_destroyed</object>
-      <object>objects\ori_destroyed</object>
-      <object>objects\obj_daedalusdestroyed</object>
+      <object>objects\obj_hatak_debris_peice</object>
+      <object>objects\obj_satellite_destroyed</object>
+      <object>objects\obj_hatak_destroyed</object>
+      <object>objects\obj_ori_destroyed</object>
+      <object>objects\obj_daedalus_destroyed</object>
     </objects>
     <objects name="interface">
       <object>objects\obj_hud</object>

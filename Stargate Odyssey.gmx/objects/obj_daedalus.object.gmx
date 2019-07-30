@@ -135,7 +135,7 @@ engine = "Offline";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_daedalusdestroyed)
+            <string>instance_create(x, y, obj_daedalus_destroyed);
 </string>
           </argument>
         </arguments>

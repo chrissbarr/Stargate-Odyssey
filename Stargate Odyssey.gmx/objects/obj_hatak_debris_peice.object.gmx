@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = random(4);
+            <string>image_index = irandom(image_number);
 image_speed = 0;
 direction = random(360);
 speed = random_range(1.0, 1.5);

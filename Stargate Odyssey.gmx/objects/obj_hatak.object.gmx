@@ -74,12 +74,12 @@ ds_list_add(gun_coords_y, 59);
             <kind>1</kind>
             <string>repeat 5
 {
-    var debris = instance_create(x, y, hatak_debris_peice_obj);
+    var debris = instance_create(x, y, obj_hatak_debris_peice);
     debris.hspeed += hspeed;
     debris.vspeed += vspeed;
 }
 
-instance_create(x, y, hatak_destroyed);
+instance_create(x, y, obj_hatak_destroyed);
 </string>
           </argument>
         </arguments>

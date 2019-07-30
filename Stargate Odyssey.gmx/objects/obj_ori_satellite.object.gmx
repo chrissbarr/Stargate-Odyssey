@@ -70,7 +70,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, satallite_destroyed);
+            <string>instance_create(x, y, obj_satellite_destroyed);
 </string>
           </argument>
         </arguments>

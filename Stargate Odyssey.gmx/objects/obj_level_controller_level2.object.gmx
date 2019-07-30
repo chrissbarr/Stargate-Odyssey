@@ -57,7 +57,7 @@ next_room = room_level3;
             <kind>1</kind>
             <string>event_inherited();
 
-if (instance_number(obj_ori_sattelite) == 0)
+if (instance_number(obj_ori_satellite) == 0)
 {
     var msg = "The Ori sattelite has been destroyed. Well done.";
     if (ds_list_find_index(messages, msg) == -1)
