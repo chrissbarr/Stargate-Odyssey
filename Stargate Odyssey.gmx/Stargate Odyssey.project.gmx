@@ -43,19 +43,10 @@
       <sprite>sprites\asgard_beam_trail_spr</sprite>
     </sprites>
     <sprites name="interface">
-      <sprite>sprites\red_radar_spr</sprite>
-      <sprite>sprites\green_radar_spr</sprite>
-      <sprite>sprites\blue_radar_spr</sprite>
-      <sprite>sprites\missile_radar_spr</sprite>
-      <sprite>sprites\hatak_bolt_radar_spr</sprite>
-      <sprite>sprites\ori_beam_radar_spr</sprite>
-      <sprite>sprites\bar2_spr</sprite>
-      <sprite>sprites\bar_spr</sprite>
+      <sprite>sprites\hud_spr</sprite>
       <sprite>sprites\power2_spr</sprite>
       <sprite>sprites\power3_spr</sprite>
       <sprite>sprites\power_spr</sprite>
-      <sprite>sprites\auto_spr</sprite>
-      <sprite>sprites\missile_control_spr</sprite>
       <sprite>sprites\shieldrestore_spr</sprite>
     </sprites>
     <sprites name="menu">

@@ -45,7 +45,7 @@ if (player != noone and instance_exists(player))
 draw_healthbar(222, 446, 387, 482, shield_bar_amount, c_black, c_blue, c_blue, 180, true, false);
 draw_healthbar(222, 460, 387, 482, hp_bar_amount, c_black, c_green, c_green, 180, true, false);
 
-draw_sprite(bar2_spr, -1, 0, 380);
+draw_sprite(hud_spr, -1, 0, 380);
 
 var mousex = device_mouse_x_to_gui(0);
 var mousey = device_mouse_y_to_gui(0);
