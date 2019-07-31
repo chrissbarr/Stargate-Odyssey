@@ -46,7 +46,6 @@ beam = part_type_create();
 part_type_blend(beam,1);
 part_type_color1(beam,make_color_rgb(255,128,64));
 part_type_sprite(beam,sprBeam,0,0,0);
-//sprite_set_alpha_from_sprite(sprBeam,sprBeam);
 part_type_orientation(beam,0,360,0,0,0);
 part_type_size(beam,0,0,0.5,1);
 
@@ -65,8 +64,9 @@ part_type_speed(fire2,15,20,-5,0);
 
 part_emitter_burst(sys,emitter,fire2,100);
 part_emitter_burst(sys,emitter,flash,5);
-alarm[0]=10;
 part_emitter_burst(sys,emitter,beam,5);
+
+alarm[0] = 10;
 </string>
           </argument>
         </arguments>
@@ -89,9 +89,18 @@ part_emitter_burst(sys,emitter,beam,5);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if times&gt;0 {alarm[0]=10;} else {times=5}
-times-=1;
-part_emitter_burst(sys,emitter,beam,5);</string>
+            <string>if (times &gt; 0)
+{
+    alarm[0] = 10;
+} 
+else
+{
+    times = 5;
+}
+
+times -= 1;
+part_emitter_burst(sys,emitter,beam,5);
+</string>
           </argument>
         </arguments>
       </action>

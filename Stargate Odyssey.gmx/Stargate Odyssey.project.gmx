@@ -99,10 +99,8 @@
       <object>objects\obj_asteroid_target</object>
       <object>objects\obj_ancient_satellite</object>
       <object>objects\obj_hatak_debris_peice</object>
-      <object>objects\obj_satellite_destroyed</object>
-      <object>objects\obj_hatak_destroyed</object>
-      <object>objects\obj_ori_destroyed</object>
-      <object>objects\obj_daedalus_destroyed</object>
+      <object>objects\obj_explosion1</object>
+      <object>objects\obj_explosion2</object>
     </objects>
     <objects name="interface">
       <object>objects\obj_hud</object>

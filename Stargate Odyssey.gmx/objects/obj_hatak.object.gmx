@@ -79,7 +79,7 @@ ds_list_add(gun_coords_y, 59);
     debris.vspeed += vspeed;
 }
 
-instance_create(x, y, obj_hatak_destroyed);
+instance_create(x, y, obj_explosion1);
 </string>
           </argument>
         </arguments>

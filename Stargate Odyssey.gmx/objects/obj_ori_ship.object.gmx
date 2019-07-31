@@ -61,7 +61,7 @@ friction = 0.2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_ori_destroyed);
+            <string>instance_create(x, y, obj_explosion2);
 </string>
           </argument>
         </arguments>
