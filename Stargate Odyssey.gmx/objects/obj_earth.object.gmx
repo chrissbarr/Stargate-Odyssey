@@ -76,7 +76,7 @@ hp_max = hp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hp &lt;= 0)
+            <string>if (hp_max != 0 and hp &lt;= 0)
 {
     instance_destroy();
 }
@@ -104,10 +104,14 @@ hp_max = hp;
             <kind>1</kind>
             <string>draw_self();
 
-var bar_halfwidth = 100;
-var bar_halfheight = 15;
-
-draw_healthbar(x - bar_halfwidth, y - bar_halfheight, x + bar_halfwidth, y + bar_halfheight, (hp / hp_max) * 100, c_green, c_red, c_green, 180, false, true);
+if (hp_max &gt; 0)
+{
+    
+    var bar_halfwidth = 100;
+    var bar_halfheight = 15;
+    
+    draw_healthbar(x - bar_halfwidth, y - bar_halfheight, x + bar_halfwidth, y + bar_halfheight, (hp / hp_max) * 100, c_green, c_red, c_green, 180, false, true);
+}
 </string>
           </argument>
         </arguments>
