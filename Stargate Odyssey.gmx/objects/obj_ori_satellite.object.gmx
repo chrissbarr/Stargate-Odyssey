@@ -125,7 +125,7 @@ if (target != noone and instance_exists(target))
             
             if (firing_shots_this_burst == 0) 
             {
-                audio_play_sound(snd_ori_sattelite, 0, false);
+                audio_play_sound_at(snd_ori_sattelite, firingX, firingY, 0, 250, 1000, 1.0, false, 0);
             }
             
             firing_shots_this_burst += 1;

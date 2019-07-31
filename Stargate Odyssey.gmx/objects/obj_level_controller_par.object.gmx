@@ -35,7 +35,7 @@ nextlevel_countdown = 0;
 next_room = room_menu;
 
 instance_create(0, 0, obj_hud);
-
+instance_create(0, 0, obj_audio_listener);
 </string>
           </argument>
         </arguments>
