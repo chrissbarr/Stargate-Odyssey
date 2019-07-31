@@ -25,9 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display_reset(8, true);
-show_debug_message(display_aa);
+            <string>// set AA and vsync
+var aa_level = 0;
 
+if (display_aa &amp; 2) 
+{
+    aa_level = 2;
+}
+
+if (display_aa &amp; 4) 
+{
+    aa_level = 4;
+}
+
+if (display_aa &amp; 8) 
+{
+    aa_level = 8;
+}
+
+show_debug_message("Maximum supported AA level is " + string(aa_level));
+display_reset(aa_level, true);
+
+// begin spawning ships
 alarm[0] = 1;
 </string>
           </argument>
