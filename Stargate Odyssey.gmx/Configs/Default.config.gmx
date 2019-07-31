@@ -681,7 +681,7 @@
     <constants number="3">
       <constant name="M_DELTA">(delta_time/1000000)</constant>
       <constant name="M_VERSION">"v0.0.0"</constant>
-      <constant name="M_DEBUG">true</constant>
+      <constant name="M_DEBUG">false</constant>
     </constants>
   </ConfigConstants>
 </Config>
