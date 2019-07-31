@@ -20,18 +20,28 @@
     //we are drawing it at the origin of the radar (top-left corner)...
     //... PLUS its position in the room scaled down for the radar
     
-    with (obj_daedalus) draw_sprite(blue_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (friendly_par) draw_sprite(green_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (enemy_par) draw_sprite(red_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (obj_missile) draw_sprite(missile_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (obj_rail_gun_round) draw_sprite(missile_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (obj_hatak_bolt) draw_sprite(hatak_bolt_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-    with (obj_ori_sattelite_beam) draw_sprite(ori_beam_radar_spr,-1,other._xx+(x/other._ww),other._yy+(y/other._hh));
-
+    with (obj_entity_par) 
+    {
+        var col;
+        
+        if (object_index == obj_daedalus) 
+        {
+            col = c_blue;
+        }
+        else if (team == 0) 
+        { 
+            col = c_green; 
+        }
+        else
+        {
+            col = c_red;
+        }
+        
+        draw_set_color(col);
+        draw_circle(other._xx+(x/other._ww),other._yy+(y/other._hh),1, false);
+    }
     
-    //we use other. because we are using a with statement
-    
-    //you can easy add more objects to the list
-    
+    //we use other. because we are using a with statement    
+    //you can easy add more objects to the list    
 
 }

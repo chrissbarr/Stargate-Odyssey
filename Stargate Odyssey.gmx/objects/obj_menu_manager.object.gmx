@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,57 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_number(menu_hatak_obj) &lt; 4) 
+            <string>// set AA and vsync
+var aa_level = 0;
+
+if (display_aa &amp; 2) 
+{
+    aa_level = 2;
+}
+
+if (display_aa &amp; 4) 
+{
+    aa_level = 4;
+}
+
+if (display_aa &amp; 8) 
+{
+    aa_level = 8;
+}
+
+show_debug_message("Maximum supported AA level is " + string(aa_level));
+display_reset(aa_level, true);
+
+// begin spawning ships
+alarm[0] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var spawn_object = obj_hatak;
+
+team_count[0] = 0;
+team_count[1] = 0;
+
+if (instance_number(spawn_object) &lt; 4) 
 {    
     var spawnX, spawnY;    
     a = irandom(3);
@@ -34,24 +84,40 @@
     {
         case 0:
             spawnX = random(room_width);
-            spawnY = -400;
+            spawnY = -100;
             break;
         case 1:
             spawnX = random(room_width);
-            spawnY = room_height + 400;
+            spawnY = room_height + 100;
             break;
         case 2:
-            spawnX = -400;
+            spawnX = -100;
             spawnY = random(room_height);
             break;
         case 3:
-            spawnX = room_width + 400;
+            spawnX = room_width + 100;
             spawnY = random(room_height);
             break;
     }
     
-    instance_create(spawnX, spawnY, menu_hatak_obj);
+    var new_hatak = instance_create(spawnX, spawnY, obj_hatak);    
+
+    with (spawn_object) 
+    {
+        other.team_count[team] += 1;
+    }
+    
+    if (team_count[0] &lt; team_count[1])
+    {
+        new_hatak.team = 0;
+    }
+    else
+    {
+        new_hatak.team = 1;
+    }
 }
+
+alarm[0] = room_speed * 2;
 </string>
           </argument>
         </arguments>
