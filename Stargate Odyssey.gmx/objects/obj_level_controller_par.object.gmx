@@ -62,7 +62,7 @@ instance_create(0, 0, obj_hud);
 {
     if (keyboard_check_pressed(ord('N')))
     {
-        room_goto_next();
+        room_goto(next_room);
     }
 }
 
