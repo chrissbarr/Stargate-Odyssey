@@ -17,52 +17,52 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="entities">
-      <sprite>sprites\daedalus_spr</sprite>
-      <sprite>sprites\hatak_spr</sprite>
-      <sprite>sprites\hatak_shield_spr</sprite>
-      <sprite>sprites\death_glider_spr</sprite>
-      <sprite>sprites\ori_sattelite_spr</sprite>
-      <sprite>sprites\ancient_sattelite_spr</sprite>
-      <sprite>sprites\ori_ship_spr</sprite>
-      <sprite>sprites\asteroid_spr</sprite>
-      <sprite>sprites\hatak_debris_spr</sprite>
+      <sprite>sprites\spr_daedalus</sprite>
+      <sprite>sprites\spr_hatak</sprite>
+      <sprite>sprites\spr_hatak_shield</sprite>
+      <sprite>sprites\spr_death_glider</sprite>
+      <sprite>sprites\spr_ori_satellite</sprite>
+      <sprite>sprites\spr_ancient_satellite</sprite>
+      <sprite>sprites\spr_ori_ship</sprite>
+      <sprite>sprites\spr_asteroid</sprite>
+      <sprite>sprites\spr_hatak_debris</sprite>
     </sprites>
     <sprites name="weapons">
-      <sprite>sprites\missile_spr</sprite>
-      <sprite>sprites\smoke_spr</sprite>
-      <sprite>sprites\ori_beam_trail_spr</sprite>
-      <sprite>sprites\ori_beam_trail2_spr</sprite>
-      <sprite>sprites\ancient_beam_trail_spr</sprite>
-      <sprite>sprites\hatak_bolt_spr</sprite>
-      <sprite>sprites\death_glider_bolt_spr</sprite>
-      <sprite>sprites\rail_gun_round_spr</sprite>
-      <sprite>sprites\ori_sattelite_beam_spr</sprite>
-      <sprite>sprites\hatak_bolt_glow_spr</sprite>
-      <sprite>sprites\ori_pulse_spr</sprite>
-      <sprite>sprites\asgard_beam_spr</sprite>
-      <sprite>sprites\asgard_beam_trail_spr</sprite>
+      <sprite>sprites\spr_missile</sprite>
+      <sprite>sprites\spr_missile_smoke</sprite>
+      <sprite>sprites\spr_ori_beam_trail</sprite>
+      <sprite>sprites\spr_ori_beam_trail2</sprite>
+      <sprite>sprites\spr_ancient_beam_trail</sprite>
+      <sprite>sprites\spr_hatak_bolt</sprite>
+      <sprite>sprites\spr_death_glider_bolt</sprite>
+      <sprite>sprites\spr_rail_gun_round</sprite>
+      <sprite>sprites\spr_ori_satellite_beam</sprite>
+      <sprite>sprites\spr_hatak_bolt_glow</sprite>
+      <sprite>sprites\spr_ori_pulse</sprite>
+      <sprite>sprites\spr_asgard_beam</sprite>
+      <sprite>sprites\spr_asgard_beam_trail</sprite>
     </sprites>
     <sprites name="interface">
-      <sprite>sprites\hud_spr</sprite>
-      <sprite>sprites\power2_spr</sprite>
-      <sprite>sprites\power3_spr</sprite>
-      <sprite>sprites\power_spr</sprite>
-      <sprite>sprites\shieldrestore_spr</sprite>
+      <sprite>sprites\spr_hud</sprite>
+      <sprite>sprites\spr_power1</sprite>
+      <sprite>sprites\spr_power2</sprite>
+      <sprite>sprites\spr_power3</sprite>
+      <sprite>sprites\spr_btn_shieldrestore</sprite>
     </sprites>
     <sprites name="menu">
-      <sprite>sprites\new_game_spr</sprite>
-      <sprite>sprites\load_game_spr</sprite>
-      <sprite>sprites\quit_game_spr</sprite>
-      <sprite>sprites\training_select_spr</sprite>
-      <sprite>sprites\level1_select_spr</sprite>
+      <sprite>sprites\spr_btn_newgame</sprite>
+      <sprite>sprites\spr_btn_loadgame</sprite>
+      <sprite>sprites\spr_btn_quitgame</sprite>
+      <sprite>sprites\spr_btn_lvl_training</sprite>
+      <sprite>sprites\spr_btn_lvl_level1</sprite>
     </sprites>
     <sprites name="scenery">
-      <sprite>sprites\earth_spr</sprite>
-      <sprite>sprites\planet1_spr</sprite>
-      <sprite>sprites\planet2_spr</sprite>
-      <sprite>sprites\moon_spr</sprite>
-      <sprite>sprites\supergate_spr</sprite>
-      <sprite>sprites\planet_spr</sprite>
+      <sprite>sprites\spr_earth</sprite>
+      <sprite>sprites\spr_planet1</sprite>
+      <sprite>sprites\spr_planet2</sprite>
+      <sprite>sprites\spr_moon</sprite>
+      <sprite>sprites\spr_supergate</sprite>
+      <sprite>sprites\spr_planet</sprite>
     </sprites>
     <sprites name="GCE3_1">
       <sprites name="GCE_explosion">
@@ -83,7 +83,7 @@
     <script>scripts\ai_get_nearest_ally.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\bonusfont</font>
+    <font>fonts\font_bonus</font>
     <font>fonts\font_message</font>
     <font>fonts\font_default</font>
   </fonts>
@@ -97,7 +97,7 @@
       <object>objects\obj_ori_satellite</object>
       <object>objects\obj_ori_ship</object>
       <object>objects\obj_asteroid_target</object>
-      <object>objects\obj_ancient_sattelite</object>
+      <object>objects\obj_ancient_satellite</object>
       <object>objects\obj_hatak_debris_peice</object>
       <object>objects\obj_satellite_destroyed</object>
       <object>objects\obj_hatak_destroyed</object>
