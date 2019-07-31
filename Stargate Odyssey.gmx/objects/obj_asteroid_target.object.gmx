@@ -30,7 +30,7 @@
 team = 1;
 hp = 20;
 
-image_speed = 0.2;
+spin_rate = -10;
 </string>
           </argument>
         </arguments>
@@ -77,8 +77,13 @@ energy+=10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hp&lt;0
-instance_destroy()</string>
+            <string>image_angle += spin_rate * M_DELTA;
+
+if (hp &lt; 0)
+{
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>
