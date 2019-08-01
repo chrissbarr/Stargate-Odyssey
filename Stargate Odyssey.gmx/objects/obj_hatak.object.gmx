@@ -167,7 +167,7 @@ if (target != noone &amp;&amp; instance_exists(target))
         var bullet = instance_create(fire_x, fire_y, obj_hatak_bolt);
         bullet.direction = point_direction(fire_x, fire_y, target.x, target.y);
         bullet.team = team;
-        audio_play_sound(snd_hatak_bolt, 0, false);
+        audio_play_sound_at(snd_hatak_bolt, fire_x, fire_y, 0, 150, 600, 1.0, false, 0);
         
         // begin waiting for next firing time
         can_fire = false;

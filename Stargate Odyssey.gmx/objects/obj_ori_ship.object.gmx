@@ -101,8 +101,8 @@ if (target != noone and instance_exists(target))
             var bullet = instance_create(varmissile1X, varmissile1Y, obj_ori_beam);
             bullet.team = team;  
             bullet.direction = direction;
-                  
-            audio_play_sound(snd_ori_beam, 0, false)
+            
+            audio_play_sound_at(snd_ori_beam, varmissile1X, varmissile1Y, 0, 250, 1000, 1.0, false, 0);
             alarm[0] = room_speed * 2 + random(room_speed * 2);
         }
     }

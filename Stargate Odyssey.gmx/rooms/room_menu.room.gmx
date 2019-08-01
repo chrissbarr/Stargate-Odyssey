@@ -56,6 +56,7 @@
     <instance objName="obj_menu_btn_quitgame" x="320" y="416" name="inst_7F8BC4A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu_manager" x="0" y="0" name="inst_85C0782B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ai_attract" x="320" y="240" name="inst_11B5C31F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_audio_listener" x="320" y="240" name="inst_EF6A3AB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
